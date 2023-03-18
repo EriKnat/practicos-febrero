@@ -1,5 +1,7 @@
+def Liquidopagable(Egresos,Ingresos):
+    return Ingresos-Egresos
 def Ingresos(sueldo,Bonodeantiguedad,Bonopro,Horaex):
-    return (sueldo+Bonodeantiguedad+Bonopro+Horaex)
+    return sueldo+Bonodeantiguedad+Bonopro+Horaex
 def Egresos(RCIVA,AFP,ANS):
     return RCIVA+AFP+ANS
 def RCIVA(sueldo,montofacturado):
@@ -69,8 +71,6 @@ horaexnoc=int(input("Ingrese horas trabajadas durante la noche"))
 horaexfer=int(input("Ingrese horas trabajadas durante dia domingo o feriado"))
 valorhora=sueldo/hora
 salariominimo=2250
-Egresos=RCIVA+AFP+ANS
-Ingresos=sueldo+Bonodeantiguedad+Bonopro+Horaex
 print("El resultadones: ",RCIVA(sueldo,montofacturado))
 print("horaex es:",Horaex(valorhora,horaexdi,horaexnoc,horaexfer))
 print("su bono de antiguedad es:", Bonodeantiguedad(years,salariominimo))
